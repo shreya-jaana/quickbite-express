@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickBite Express — Kitchen Se Doorstep Tak</title>
+  <meta name="description" content="QuickBite Express — India's first vertically integrated food delivery ecosystem. ByteKitchen cloud kitchens, SwiftGrid logistics, LinkFleet delivery. Order food by mood." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="logo-icon">🍽️</div>
+      <div class="logo-text">
+        <strong>QuickBite</strong>
+        <span>Express</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#mood-menu">Mood Menu</a></li>
+      <li><a href="#kitchen">Live Kitchen</a></li>
+      <li><a href="#qb-circle">QB Circle</a></li>
+      <li><a href="#byot">BYOT</a></li>
+      <li><a href="#recipe-royalty">Recipe Royalty</a></li>
+      <li><a href="#swadeshi">Swadeshi</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div id="cart-btn" style="position:relative; cursor:pointer; margin-right:4px;">
+        <span style="font-size:1.4rem; color:white;">🛒</span>
+        <span id="cart-count" style="display:none; position:absolute; top:-8px; right:-8px;
+          background:var(--tomato); color:white; font-size:.65rem; font-weight:900;
+          width:18px; height:18px; border-radius:50%; align-items:center; justify-content:center;">0</span>
+      </div>
+      <a href="#mood-menu" class="btn btn-primary btn-sm">Order Now</a>
+    </div>
+
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <div class="hero-badge fade-in-up">
+        <span>🚀</span> India's First Vertically Integrated Food Delivery
+      </div>
+
+      <h1 class="hero-title fade-in-up delay-1">
+        <em>Kitchen</em> Se<br>
+        Doorstep Tak
+      </h1>
+      <p class="hero-subtitle fade-in-up delay-2">We Own The Entire Chain.</p>
+      <p class="hero-desc fade-in-up delay-3">
+        ByteKitchen cloud kitchens → SwiftGrid logistics → LinkFleet delivery —
+        all under one roof. No middlemen. No excuses. Just extraordinary food, always on time.
+      </p>
+
+      <div class="hero-actions fade-in-up delay-4">
+        <a id="hero-order-btn" href="#mood-menu" class="btn btn-primary">
+          🎭 Order by Mood
+        </a>
+        <a href="#kitchen" class="btn btn-secondary">
+          📷 Watch Live Kitchen
+        </a>
+      </div>
+
+      <div class="hero-stats fade-in-up delay-5 has-counters">
+        <div class="hero-stat">
+          <strong><span data-count="50000" data-suffix="+">0</span></strong>
+          <span>Daily Orders</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <strong>4.9 ★</strong>
+          <span>Avg Rating</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <strong><span data-count="28" data-suffix=" min">0</span></strong>
+          <span>Avg Delivery</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat">
+          <strong><span data-count="200" data-suffix="+">0</span></strong>
+          <span>ByteKitchens</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="food-float">🍕</div>
+      <div class="food-float">🍛</div>
+      <div class="food-float">🥗</div>
+      <div class="food-float">🍜</div>
+      <div class="food-float">🍔</div>
+      <div class="food-float">🥘</div>
+      <div class="hero-orb-main">🍽️</div>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#FFF9F0"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     DELIVERY STRIP
+═══════════════════════════════════════ -->
+<div id="delivery-strip">
+  <div class="strip-track">
+    <span class="strip-item"><span>🚀</span> <strong>28-min</strong> average delivery</span>
+    <span class="strip-item"><span>🏭</span> <strong>ByteKitchen</strong> — 200+ cloud kitchens</span>
+    <span class="strip-item"><span>🚚</span> <strong>SwiftGrid</strong> — real-time logistics</span>
+    <span class="strip-item"><span>🛵</span> <strong>LinkFleet</strong> — owned delivery network</span>
+    <span class="strip-item"><span>📷</span> <strong>Transparency Kitchen</strong> — watch your food get made</span>
+    <span class="strip-item"><span>♻️</span> <strong>BYOT</strong> — bring your tiffin, save more</span>
+    <span class="strip-item"><span>🇮🇳</span> <strong>Swadeshi</strong> — data stays in India</span>
+    <span class="strip-item"><span>💎</span> <strong>QB Circle</strong> — earn rewards every order</span>
+    <span class="strip-item"><span>🚀</span> <strong>28-min</strong> average delivery</span>
+    <span class="strip-item"><span>🏭</span> <strong>ByteKitchen</strong> — 200+ cloud kitchens</span>
+    <span class="strip-item"><span>🚚</span> <strong>SwiftGrid</strong> — real-time logistics</span>
+    <span class="strip-item"><span>🛵</span> <strong>LinkFleet</strong> — owned delivery network</span>
+    <span class="strip-item"><span>📷</span> <strong>Transparency Kitchen</strong> — watch your food get made</span>
+    <span class="strip-item"><span>♻️</span> <strong>BYOT</strong> — bring your tiffin, save more</span>
+    <span class="strip-item"><span>🇮🇳</span> <strong>Swadeshi</strong> — data stays in India</span>
+    <span class="strip-item"><span>💎</span> <strong>QB Circle</strong> — earn rewards every order</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════ -->
+<section id="how-it-works" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">🔗 Vertically Integrated</div>
+      <h2>We Own Every Step</h2>
+      <p>Unlike Swiggy or Zomato, QuickBite controls the entire value chain — from cooking to your doorstep. That's how we guarantee quality, speed, and price.</p>
+    </div>
+
+    <div class="pipeline">
+      <div class="pipeline-step reveal delay-1">
+        <div class="step-icon s1" data-num="1">🏭</div>
+        <div>
+          <div class="step-brand">ByteKitchen</div>
+          <h4>Cloud Kitchen</h4>
+          <p>FSSAI-certified cloud kitchens cooking fresh meals from standardised recipes with live cameras rolling 24/7.</p>
+        </div>
+      </div>
+
+      <div class="pipeline-step reveal delay-2">
+        <div class="step-icon s2" data-num="2">📦</div>
+        <div>
+          <div class="step-brand">SwiftGrid</div>
+          <h4>Smart Logistics</h4>
+          <p>AI-powered route optimisation ensures your order leaves the kitchen hot and on time — every single time.</p>
+        </div>
+      </div>
+
+      <div class="pipeline-step reveal delay-3">
+        <div class="step-icon s3" data-num="3">🛵</div>
+        <div>
+          <div class="step-brand">LinkFleet</div>
+          <h4>Owned Delivery</h4>
+          <p>Our own GPS-tracked fleet with insulated bags — not third-party contractors. Full accountability.</p>
+        </div>
+      </div>
+
+      <div class="pipeline-step reveal delay-4">
+        <div class="step-icon s4" data-num="4">🏠</div>
+        <div>
+          <div class="step-brand">Your Door</div>
+          <h4>Happy Customer</h4>
+          <p>Delivered within 28 minutes on average. Guaranteed fresh, hot, and exactly right. Or it's free.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3 reveal" style="margin-top:56px;">
+      <div class="card text-center">
+        <div style="font-size:2.5rem; margin-bottom:12px;">🎯</div>
+        <h4 style="color:var(--navy); margin-bottom:8px;">Zero Middlemen</h4>
+        <p style="color:#777; font-size:.88rem;">We cook, pack, and deliver — keeping costs low and quality high. No restaurant aggregation fees ever.</p>
+      </div>
+      <div class="card text-center">
+        <div style="font-size:2.5rem; margin-bottom:12px;">📊</div>
+        <h4 style="color:var(--navy); margin-bottom:8px;">Real-Time Tracking</h4>
+        <p style="color:#777; font-size:.88rem;">Track your rider on LinkFleet's live map. Know exactly when your biryani arrives to the minute.</p>
+      </div>
+      <div class="card text-center">
+        <div style="font-size:2.5rem; margin-bottom:12px;">💰</div>
+        <h4 style="color:var(--navy); margin-bottom:8px;">Better Economics</h4>
+        <p style="color:#777; font-size:.88rem;">Vertical integration lets us offer 30% better prices than aggregator-dependent competitors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     MOOD MENU
+═══════════════════════════════════════ -->
+<section id="mood-menu" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">🎭 AI-Powered</div>
+      <h2>Order by Your Mood</h2>
+      <p>Feeling happy? Stressed? Romantic? Our Mood Menu matches your emotion to the perfect dish. 12 moods, thousands of combinations — click one below.</p>
+    </div>
+
+    <div class="mood-grid reveal">
+      <div class="mood-card" data-mood="happy">
+        <span class="mood-emoji">😊</span>
+        <div class="mood-name">Happy</div>
+        <div class="mood-tag">Joyful vibes</div>
+      </div>
+      <div class="mood-card" data-mood="sad">
+        <span class="mood-emoji">😢</span>
+        <div class="mood-name">Sad</div>
+        <div class="mood-tag">Comfort food</div>
+      </div>
+      <div class="mood-card" data-mood="romantic">
+        <span class="mood-emoji">💕</span>
+        <div class="mood-name">Romantic</div>
+        <div class="mood-tag">Date night</div>
+      </div>
+      <div class="mood-card" data-mood="party">
+        <span class="mood-emoji">🎉</span>
+        <div class="mood-name">Party</div>
+        <div class="mood-tag">Squad goals</div>
+      </div>
+      <div class="mood-card" data-mood="lazy">
+        <span class="mood-emoji">😴</span>
+        <div class="mood-name">Lazy</div>
+        <div class="mood-tag">Couch mode</div>
+      </div>
+      <div class="mood-card" data-mood="stressed">
+        <span class="mood-emoji">😤</span>
+        <div class="mood-name">Stressed</div>
+        <div class="mood-tag">Decompress</div>
+      </div>
+      <div class="mood-card" data-mood="hungry">
+        <span class="mood-emoji">🤤</span>
+        <div class="mood-name">Hungry</div>
+        <div class="mood-tag">XL portions</div>
+      </div>
+      <div class="mood-card" data-mood="healthy">
+        <span class="mood-emoji">💪</span>
+        <div class="mood-name">Healthy</div>
+        <div class="mood-tag">Clean eating</div>
+      </div>
+      <div class="mood-card" data-mood="nostalgic">
+        <span class="mood-emoji">🏠</span>
+        <div class="mood-name">Nostalgic</div>
+        <div class="mood-tag">Ghar ka khaana</div>
+      </div>
+      <div class="mood-card" data-mood="adventurous">
+        <span class="mood-emoji">🌏</span>
+        <div class="mood-name">Adventurous</div>
+        <div class="mood-tag">World flavours</div>
+      </div>
+      <div class="mood-card" data-mood="comfort">
+        <span class="mood-emoji">🤗</span>
+        <div class="mood-name">Comfort</div>
+        <div class="mood-tag">Warm &amp; cosy</div>
+      </div>
+      <div class="mood-card" data-mood="celebrating">
+        <span class="mood-emoji">🎂</span>
+        <div class="mood-name">Celebrating</div>
+        <div class="mood-tag">Every win</div>
+      </div>
+    </div>
+
+    <div id="mood-result" class="mood-result reveal">
+      <div class="mood-result-header">
+        <div class="big-emoji">🎭</div>
+        <div>
+          <h3>Select a Mood Above</h3>
+          <p>Your personalised recommendations will appear here.</p>
+        </div>
+      </div>
+      <div class="food-recommendations"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     TRANSPARENCY KITCHEN
+═══════════════════════════════════════ -->
+<section id="kitchen" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">📷 Live Now</div>
+      <h2>Transparency Kitchen</h2>
+      <p>Watch your food being cooked in real time. No secrets, no shortcuts. Every ByteKitchen is live-streamed so you know exactly what's in your meal.</p>
+    </div>
+
+    <div class="kitchen-grid">
+      <div class="camera-feed reveal">
+        <div class="camera-header">
+          <div class="cam-dot red"></div>
+          <div class="cam-dot gold"></div>
+          <div class="cam-dot green"></div>
+          <span class="cam-label">ByteKitchen #BK-042 — Koramangala, Bengaluru</span>
+          <span class="cam-live">LIVE</span>
+        </div>
+        <div class="camera-body">
+          <div class="scan-line"></div>
+          <div class="kitchen-overlay">
+            <div class="k-zone">PREP ZONE A</div>
+            <div class="k-zone">COOKING STATION</div>
+            <div class="k-zone">QUALITY CHECK</div>
+            <div class="k-zone">PACKAGING</div>
+          </div>
+          <div class="kitchen-scene">👨‍🍳</div>
+        </div>
+        <div class="camera-footer">
+          <span class="cam-temp">🌡️ Kitchen: 24°C  |  Food Temp: 82°C</span>
+          <span class="cam-rating">Hygiene: <strong>A+</strong> | FSSAI ✓</span>
+        </div>
+      </div>
+
+      <div class="kitchen-features reveal delay-2">
+        <div class="k-feature">
+          <div class="k-feature-icon">📷</div>
+          <div>
+            <h4>24/7 Live Cameras</h4>
+            <p>Every ByteKitchen has HD cameras streaming to the app. Tap to watch your specific order being prepared.</p>
+          </div>
+        </div>
+        <div class="k-feature">
+          <div class="k-feature-icon">🌡️</div>
+          <div>
+            <h4>Real-Time Hygiene Scores</h4>
+            <p>Automated IoT sensors monitor temperature, cleanliness, and food safety — updated every 60 seconds.</p>
+          </div>
+        </div>
+        <div class="k-feature">
+          <div class="k-feature-icon">👨‍🍳</div>
+          <div>
+            <h4>Chef Profiles</h4>
+            <p>See your chef's name, experience, and rating. Our chefs go through 3-month ByteAcademy training.</p>
+          </div>
+        </div>
+        <div class="k-feature">
+          <div class="k-feature-icon">🏅</div>
+          <div>
+            <h4>FSSAI Certified</h4>
+            <p>All kitchens hold FSSAI Grade A certification. Monthly third-party audits, no exceptions.</p>
+          </div>
+        </div>
+
+        <div style="background:rgba(244,162,97,.12); border:1px solid rgba(244,162,97,.3); border-radius:14px; padding:20px; display:flex; align-items:center; gap:16px;">
+          <div style="font-size:2rem;">🔥</div>
+          <div>
+            <div style="font-size:.82rem; color:rgba(255,255,255,.6); margin-bottom:4px;">Active orders right now</div>
+            <div style="font-size:1.8rem; font-weight:900; color:var(--saffron);" id="orders-live">2,847</div>
+          </div>
+          <div style="margin-left:auto; text-align:right;">
+            <div style="font-size:.75rem; color:rgba(255,255,255,.5);">Kitchens active</div>
+            <div style="font-size:1.3rem; font-weight:900; color:var(--white);">187</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     QB CIRCLE — LOYALTY
+═══════════════════════════════════════ -->
+<section id="qb-circle" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">💎 Loyalty Programme</div>
+      <h2>QB Circle</h2>
+      <p>Every rupee you spend earns QB Points. Climb through Silver, Gold, Platinum, and Diamond tiers — unlock exclusive perks at every level.</p>
+    </div>
+
+    <div class="tier-grid reveal">
+      <div class="tier-card silver">
+        <div class="tier-badge">🥈</div>
+        <div class="tier-name">Silver</div>
+        <div class="tier-range">0 – 500 QB Points</div>
+        <div class="tier-perks">
+          <div class="perk-item">5% cashback on every order</div>
+          <div class="perk-item">Free delivery on weekends</div>
+          <div class="perk-item">Birthday surprise dessert</div>
+          <div class="perk-item">Priority support chat</div>
+        </div>
+        <button class="tier-cta">Join Free</button>
+      </div>
+
+      <div class="tier-card gold">
+        <div class="tier-badge">🥇</div>
+        <div class="tier-name">Gold</div>
+        <div class="tier-range">501 – 2,000 QB Points</div>
+        <div class="tier-perks">
+          <div class="perk-item">10% cashback every order</div>
+          <div class="perk-item">Free delivery always</div>
+          <div class="perk-item">Early Mood Menu access</div>
+          <div class="perk-item">Chef's Special discounts</div>
+        </div>
+        <button class="tier-cta">Upgrade</button>
+      </div>
+
+      <div class="tier-card platinum">
+        <div class="tier-badge">💠</div>
+        <div class="tier-name">Platinum</div>
+        <div class="tier-range">2,001 – 5,000 QB Points</div>
+        <div class="tier-perks">
+          <div class="perk-item">15% cashback every order</div>
+          <div class="perk-item">Free priority delivery</div>
+          <div class="perk-item">Exclusive Platinum menu</div>
+          <div class="perk-item">Tata Neu / ONDC bonus</div>
+        </div>
+        <button class="tier-cta">Upgrade</button>
+        <div class="tier-popular">POPULAR</div>
+      </div>
+
+      <div class="tier-card diamond">
+        <div class="tier-glow"></div>
+        <div class="tier-badge">💎</div>
+        <div class="tier-name text-cream">Diamond</div>
+        <div class="tier-range">5,001+ QB Points</div>
+        <div class="tier-perks">
+          <div class="perk-item">20% cashback + QB Cash</div>
+          <div class="perk-item">Dedicated concierge</div>
+          <div class="perk-item">Invite-only chef tables</div>
+          <div class="perk-item">Recipe Royalty 2× earnings</div>
+        </div>
+        <button class="tier-cta">Upgrade</button>
+        <div class="tier-popular" style="background:var(--saffron); color:var(--navy);">ELITE</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:40px; background:var(--cream); border-radius:16px; padding:32px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;">
+      <div>
+        <div style="font-size:1.8rem; margin-bottom:8px;">🛒</div>
+        <strong style="color:var(--navy); display:block; margin-bottom:4px;">1 QB Point</strong>
+        <span style="font-size:.82rem; color:#888;">per ₹10 spent</span>
+      </div>
+      <div>
+        <div style="font-size:1.8rem; margin-bottom:8px;">♻️</div>
+        <strong style="color:var(--navy); display:block; margin-bottom:4px;">50 QB Points</strong>
+        <span style="font-size:.82rem; color:#888;">per BYOT order</span>
+      </div>
+      <div>
+        <div style="font-size:1.8rem; margin-bottom:8px;">👩‍🍳</div>
+        <strong style="color:var(--navy); display:block; margin-bottom:4px;">100 QB Points</strong>
+        <span style="font-size:.82rem; color:#888;">per approved recipe</span>
+      </div>
+      <div>
+        <div style="font-size:1.8rem; margin-bottom:8px;">⭐</div>
+        <strong style="color:var(--navy); display:block; margin-bottom:4px;">25 QB Points</strong>
+        <span style="font-size:.82rem; color:#888;">per 5-star review</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     BYOT — BRING YOUR OWN TIFFIN
+═══════════════════════════════════════ -->
+<section id="byot" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">♻️ Eco-First</div>
+      <h2>BYOT — Bring Your Own Tiffin</h2>
+      <p>Eliminate single-use packaging waste. Use your own tiffin, save on every order, earn bonus QB Points, and help India go green — one meal at a time.</p>
+    </div>
+
+    <div class="byot-grid">
+      <div class="byot-left reveal">
+        <div class="byot-icon">🥡</div>
+        <h3>Your Tiffin. Our Food. Zero Waste.</h3>
+        <p>Simply select "BYOT" at checkout. Our ByteKitchen packs your meal directly into your tiffin at a designated hygiene station — no plastic, no styrofoam, no guilt.</p>
+        <div class="byot-steps">
+          <div class="byot-step">
+            <div class="byot-num">1</div>
+            <p>Select BYOT at checkout → rider collects your tiffin</p>
+          </div>
+          <div class="byot-step">
+            <div class="byot-num">2</div>
+            <p>Tiffin sanitised at ByteKitchen hygiene station</p>
+          </div>
+          <div class="byot-step">
+            <div class="byot-num">3</div>
+            <p>Meal packed fresh — earn 50 QB Points instantly</p>
+          </div>
+          <div class="byot-step">
+            <div class="byot-num">4</div>
+            <p>₹15–₹25 discount applied on every BYOT order</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="byot-stats-panel reveal delay-2">
+        <h3>🌱 BYOT Impact Dashboard</h3>
+        <div class="byot-stat-row has-counters">
+          <div class="byot-stat">
+            <span>Annual packaging cost saved</span>
+            <strong>₹<span data-count="87" data-suffix=" Crore">0</span></strong>
+          </div>
+          <div class="byot-stat">
+            <span>Plastic units eliminated / month</span>
+            <strong><span data-count="12000000" data-suffix="">0</span>+</strong>
+          </div>
+          <div class="byot-stat">
+            <span>CO₂ reduced (tonnes / year)</span>
+            <strong><span data-count="4200" data-suffix="">0</span>+</strong>
+          </div>
+          <div class="byot-stat">
+            <span>Avg customer saving / order</span>
+            <strong>₹<span data-count="20" data-suffix="">0</span></strong>
+          </div>
+        </div>
+        <div class="eco-badges">
+          <div class="eco-badge">🌿 Zero Plastic Goal 2027</div>
+          <div class="eco-badge">♻️ GreenIndia Certified</div>
+          <div class="eco-badge">🏆 ESG Score A+</div>
+          <div class="eco-badge">🇮🇳 Swachh Bharat Partner</div>
+        </div>
+        <br>
+        <button id="byot-cta" class="btn" style="background:#2dc653; color:white; width:100%; justify-content:center;">
+          ♻️ Register for BYOT Programme
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     RECIPE ROYALTY
+═══════════════════════════════════════ -->
+<section id="recipe-royalty" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">👩‍🍳 Earn While You Cook</div>
+      <h2>Recipe Royalty</h2>
+      <p>Submit your family recipe. If it gets listed on QuickBite, you earn a royalty on every order placed. Naani ki biryani could make her rich.</p>
+    </div>
+
+    <div class="recipe-grid">
+      <div class="recipe-form reveal">
+        <h3>Submit Your Recipe</h3>
+        <p class="subtitle">Join 3,400+ Recipe Royalty earners on QuickBite</p>
+
+        <form id="recipe-form">
+          <div class="form-group">
+            <label for="recipe-name">Recipe Name</label>
+            <input type="text" id="recipe-name" placeholder="e.g., Ammi's Special Haleem" />
+          </div>
+          <div class="form-group">
+            <label for="recipe-category">Category</label>
+            <select id="recipe-category">
+              <option value="">-- Select Category --</option>
+              <option>North Indian</option>
+              <option>South Indian</option>
+              <option>Street Food</option>
+              <option>Desserts &amp; Sweets</option>
+              <option>Continental / Fusion</option>
+              <option>Healthy / Diet</option>
+              <option>Beverages</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="orders-input">Estimated Daily Orders (if listed)</label>
+            <input type="number" id="orders-input" placeholder="e.g., 50" min="1" />
+          </div>
+          <div class="earnings-preview">
+            <span>Your estimated monthly earnings</span>
+            <strong id="earnings-display">₹0</strong>
+          </div>
+          <div class="form-group">
+            <label for="recipe-story">Your Recipe Story</label>
+            <textarea id="recipe-story" rows="3" placeholder="Tell us the story behind this recipe..."></textarea>
+          </div>
+          <button type="submit" id="recipe-submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            🚀 Submit Recipe &amp; Start Earning
+          </button>
+        </form>
+      </div>
+
+      <div class="featured-chefs reveal delay-2">
+        <h3>🌟 Top Recipe Royalty Earners</h3>
+        <div class="chef-cards">
+          <div class="chef-card">
+            <div class="chef-avatar">👩‍🍳</div>
+            <div class="chef-info">
+              <h4>Rekha Sharma</h4>
+              <p>Dal Makhani Supreme • Delhi</p>
+              <div style="margin-top:4px;"><span style="font-size:.7rem; background:rgba(230,57,70,.1); color:var(--tomato); padding:2px 8px; border-radius:50px; font-weight:700;">1,240 orders/mo</span></div>
+            </div>
+            <div class="chef-earnings"><strong>₹9,920</strong><span>this month</span></div>
+          </div>
+          <div class="chef-card">
+            <div class="chef-avatar">👨‍🍳</div>
+            <div class="chef-info">
+              <h4>Arjun Nair</h4>
+              <p>Kerala Fish Curry • Kochi</p>
+              <div style="margin-top:4px;"><span style="font-size:.7rem; background:rgba(230,57,70,.1); color:var(--tomato); padding:2px 8px; border-radius:50px; font-weight:700;">980 orders/mo</span></div>
+            </div>
+            <div class="chef-earnings"><strong>₹7,840</strong><span>this month</span></div>
+          </div>
+          <div class="chef-card">
+            <div class="chef-avatar">👩</div>
+            <div class="chef-info">
+              <h4>Fatima Ansari</h4>
+              <p>Hyderabadi Biryani • Hyderabad</p>
+              <div style="margin-top:4px;"><span style="font-size:.7rem; background:rgba(230,57,70,.1); color:var(--tomato); padding:2px 8px; border-radius:50px; font-weight:700;">2,100 orders/mo</span></div>
+            </div>
+            <div class="chef-earnings"><strong>₹16,800</strong><span>this month</span></div>
+          </div>
+          <div class="chef-card">
+            <div class="chef-avatar">👴</div>
+            <div class="chef-info">
+              <h4>Harish Mehta</h4>
+              <p>Gujarati Thali • Ahmedabad</p>
+              <div style="margin-top:4px;"><span style="font-size:.7rem; background:rgba(230,57,70,.1); color:var(--tomato); padding:2px 8px; border-radius:50px; font-weight:700;">760 orders/mo</span></div>
+            </div>
+            <div class="chef-earnings"><strong>₹6,080</strong><span>this month</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:28px; background:linear-gradient(135deg,rgba(230,57,70,.08),rgba(244,162,97,.08)); border-radius:14px; padding:22px; border:1px solid rgba(230,57,70,.15);">
+          <h4 style="color:var(--navy); margin-bottom:12px;">How Recipe Royalty Works</h4>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; gap:10px; align-items:center; font-size:.88rem; color:#555;"><span style="font-size:1.1rem;">📝</span> Submit your recipe with ingredients &amp; story</div>
+            <div style="display:flex; gap:10px; align-items:center; font-size:.88rem; color:#555;"><span style="font-size:1.1rem;">✅</span> ByteKitchen tests and certifies it (7–14 days)</div>
+            <div style="display:flex; gap:10px; align-items:center; font-size:.88rem; color:#555;"><span style="font-size:1.1rem;">🚀</span> Listed on app with your name &amp; photo</div>
+            <div style="display:flex; gap:10px; align-items:center; font-size:.88rem; color:#555;"><span style="font-size:1.1rem;">💸</span> Earn ₹8 royalty per order, deposited monthly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SWADESHI ALLIANCE
+═══════════════════════════════════════ -->
+<section id="swadeshi" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="badge">🇮🇳 Made in India</div>
+      <h2>Swadeshi Alliance</h2>
+      <p>QuickBite is proudly Indian — partnered with Tata Neu, JioMart, and ONDC to build a truly swadeshi food ecosystem that keeps data, money, and trust in India.</p>
+    </div>
+
+    <div class="alliance-partners reveal">
+      <div class="partner-card">
+        <div class="partner-logo">🔵</div>
+        <h3>Tata Neu</h3>
+        <p>NeuCoins on every QuickBite order. Cross-redemption across the entire Tata ecosystem — Air India, BigBasket, Croma and more.</p>
+        <div class="partner-badge">NeuCoins Integration</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo">🟢</div>
+        <h3>JioMart</h3>
+        <p>Jio loyalty points stack with QB Points. Grocery + food ordering from a single Indian super-app — Reliance network, national reach.</p>
+        <div class="partner-badge">JioPoints Crossover</div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo">🟠</div>
+        <h3>ONDC Network</h3>
+        <p>QuickBite is fully ONDC-compliant — open, interoperable, and accessible to every Indian restaurant and consumer without lock-in.</p>
+        <div class="partner-badge">ONDC Certified</div>
+      </div>
+    </div>
+
+    <div class="swadeshi-strip reveal">
+      <div class="swadeshi-item">
+        <div class="big gold">🇮🇳</div>
+        <h3 style="color:white; margin-bottom:6px;">Ghar Waapsi</h3>
+        <p>All servers migrated to India, Singapore &amp; Ireland. Your data never leaves friendly jurisdictions.</p>
+        <div class="flag-row">
+          <div class="flag-pill">🇮🇳 Mumbai</div>
+          <div class="flag-pill">🇸🇬 Singapore</div>
+          <div class="flag-pill">🇮🇪 Dublin</div>
+        </div>
+      </div>
+
+      <div class="swadeshi-divider"></div>
+
+      <div class="swadeshi-item">
+        <div class="big gold">100%</div>
+        <p>Zero data shared with foreign Big Tech platforms. Anti-data breach architecture by design.</p>
+        <div style="margin-top:12px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+          <div class="flag-pill">🔒 ISO 27001</div>
+          <div class="flag-pill">🛡️ DPDP Act Compliant</div>
+        </div>
+      </div>
+
+      <div class="swadeshi-divider"></div>
+
+      <div class="swadeshi-item">
+        <div class="big gold">₹0</div>
+        <p>Money paid to foreign food aggregators. Every rupee stays inside the Indian economy.</p>
+        <div style="margin-top:12px;">
+          <div class="flag-pill" style="display:inline-flex;">🇮🇳 Indian Founders, Indian Capital</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     APP DOWNLOAD
+═══════════════════════════════════════ -->
+<section id="app-download" class="section-pad">
+  <div class="container">
+    <div class="app-grid">
+      <div class="app-left reveal">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(230,57,70,.1); color:var(--tomato); font-size:.8rem; font-weight:700; padding:6px 16px; border-radius:50px; margin-bottom:20px; letter-spacing:1.5px; text-transform:uppercase;">
+          📱 Download Now
+        </div>
+        <h2>Order Food<br>On The Go</h2>
+        <p>The QuickBite Express app brings your Mood Menu, live kitchen cam, QB Circle dashboard, BYOT tracker, and Recipe Royalty earnings all in one place.</p>
+
+        <div class="app-perks">
+          <div class="app-perk"><div class="app-perk-icon">🎭</div> Mood-based ordering in 3 taps</div>
+          <div class="app-perk"><div class="app-perk-icon">📷</div> Live kitchen stream in-app</div>
+          <div class="app-perk"><div class="app-perk-icon">🛵</div> Real-time LinkFleet tracking</div>
+          <div class="app-perk"><div class="app-perk-icon">💎</div> QB Circle points dashboard</div>
+        </div>
+
+        <div class="app-store-btns">
+          <div class="store-btn">
+            <div class="store-icon">🍎</div>
+            <div class="store-btn-text">
+              <span>Download on the</span>
+              <strong>App Store</strong>
+            </div>
+          </div>
+          <div class="store-btn">
+            <div class="store-icon">🤖</div>
+            <div class="store-btn-text">
+              <span>Get it on</span>
+              <strong>Google Play</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-wrapper reveal delay-2">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-content">
+              <div class="phone-header">
+                <h5>🍽️ QuickBite Express</h5>
+                <p>Good evening! What's your mood? 🌙</p>
+              </div>
+              <div class="phone-search">🔍 Search dishes, cuisines, moods...</div>
+              <div style="font-size:.7rem; font-weight:700; color:var(--navy); margin-bottom:8px;">🎭 Choose Your Mood</div>
+              <div class="phone-moods">
+                <div class="p-mood">😊<span>Happy</span></div>
+                <div class="p-mood">🤤<span>Hungry</span></div>
+                <div class="p-mood">🏠<span>Nostalgic</span></div>
+                <div class="p-mood">💪<span>Healthy</span></div>
+                <div class="p-mood">🎉<span>Party</span></div>
+                <div class="p-mood">💕<span>Romantic</span></div>
+              </div>
+              <div style="font-size:.7rem; font-weight:700; color:var(--navy); margin-bottom:8px;">🔥 Trending Now</div>
+              <div class="phone-items">
+                <div class="p-item">
+                  <div class="emoji">🍛</div>
+                  <div class="p-item-info"><h6>Chicken Biryani</h6><span>ByteKitchen #BK-042</span></div>
+                  <div class="p-item-price">₹249</div>
+                </div>
+                <div class="p-item">
+                  <div class="emoji">🥗</div>
+                  <div class="p-item-info"><h6>Quinoa Power Bowl</h6><span>ByteKitchen #BK-071</span></div>
+                  <div class="p-item-price">₹199</div>
+                </div>
+                <div class="p-item">
+                  <div class="emoji">🍕</div>
+                  <div class="p-item-info"><h6>Margherita Pizza</h6><span>ByteKitchen #BK-018</span></div>
+                  <div class="p-item-price">₹299</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     HINGLISH CLOSER VERSE
+═══════════════════════════════════════ -->
+<section id="hinglish-close">
+  <div class="container">
+    <div class="verse reveal">
+      <div style="font-size:2rem; margin-bottom:20px;">🎤</div>
+      <p>
+        <strong>Kitchen se doorstep tak,</strong> har bite mein dil ka pyaar,<br>
+        ByteKitchen paka raha hai, SwiftGrid kar raha intizaar.<br>
+        <strong>Transparency ka vaada,</strong> live camera ka nazaara,<br>
+        Tumhara tiffin, tumhari bachat — BYOT ka naara.<br>
+        <strong>Ghar Waapsi data ki,</strong> ONDC ka safar,<br>
+        QuickBite Express — <strong>India ka apna delivery ka fakhaar! 🇮🇳</strong>
+      </p>
+    </div>
+    <div class="close-cta reveal delay-2">
+      <a href="#mood-menu" class="btn btn-primary">🎭 Order by Mood Now</a>
+      <a href="#qb-circle" class="btn btn-secondary">💎 Join QB Circle</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="f-logo">🍽️</div>
+          <span class="f-name">QuickBite Express</span>
+        </div>
+        <p>India's first vertically integrated food delivery ecosystem. ByteKitchen, SwiftGrid, and LinkFleet — all under one roof.</p>
+        <div class="social-links">
+          <a class="social-link" title="Instagram">📸</a>
+          <a class="social-link" title="Twitter">🐦</a>
+          <a class="social-link" title="LinkedIn">💼</a>
+          <a class="social-link" title="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">ByteKitchen</a></li>
+          <li><a href="#">SwiftGrid</a></li>
+          <li><a href="#">LinkFleet</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Features</h5>
+        <ul>
+          <li><a href="#mood-menu">Mood Menu</a></li>
+          <li><a href="#kitchen">Live Kitchen</a></li>
+          <li><a href="#qb-circle">QB Circle</a></li>
+          <li><a href="#byot">BYOT Programme</a></li>
+          <li><a href="#recipe-royalty">Recipe Royalty</a></li>
+          <li><a href="#swadeshi">Swadeshi Alliance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal &amp; Support</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">DPDP Compliance</a></li>
+          <li><a href="#">FSSAI Certificates</a></li>
+          <li><a href="#">Help Centre</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 QuickBite Express Pvt. Ltd. All rights reserved.</span>
+      <div class="made-with">
+        Made with ❤️ in India <span class="flag">🇮🇳</span>
+        &nbsp;|&nbsp; FSSAI Lic. 11223344556677 &nbsp;|&nbsp; FORGE 2026 — Brand Brigade
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<button id="back-top" title="Back to top">↑</button>
+
+<script src="app.js"></script>
+</body>
+  </html>
